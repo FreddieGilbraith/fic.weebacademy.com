@@ -1,0 +1,17 @@
+{
+	"name": "fic.weebacademy.com",
+	"prettier": {
+		"tabWidth": 4,
+		"trailingComma": "all",
+		"useTabs": true
+	},
+	"scripts": {
+		"base": "make-static-site --feed feed.toml --out-dir output",
+		"build": "npm run base -- --for-vercel",
+		"hyper": "npm run base -- --for-hyper && hyp drive diff --no-delete --commit output "
+	},
+	"dependencies": {
+		"@little-bonsai/make-static-project-site": "^0.4.6",
+		"@splitbee/node": "^0.2.0"
+	}
+}
